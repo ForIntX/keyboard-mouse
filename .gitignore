@@ -1,0 +1,17 @@
+/build/
+/build-*/
+/cmake-build-*/
+/CMakeFiles/
+/CMakeCache.txt
+/Testing/
+compile_commands.json
+*.o
+*.a
+*.so
+*.swp
+*~
+.idea/
+.vscode/
+
+# Local maintainer notes; never publish
+/README.local.md

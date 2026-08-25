@@ -1,0 +1,53 @@
+name: Bug report
+description: Report a reproducible Keyboard Mouse problem
+title: "[Bug]: "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: Do not paste raw keyboard-event logs or sensitive keystrokes.
+  - type: input
+    id: version
+    attributes:
+      label: Keyboard Mouse version
+      description: Output of `keyboard-mouse --version`.
+    validations:
+      required: true
+  - type: input
+    id: system
+    attributes:
+      label: Linux system
+      description: Distribution, kernel, desktop environment, and X11 or Wayland.
+    validations:
+      required: true
+  - type: input
+    id: keyboard
+    attributes:
+      label: Keyboard model and connection
+      description: Built-in, USB, Bluetooth, or 2.4 GHz receiver.
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened?
+      description: Include expected behavior and exact reproduction steps.
+    validations:
+      required: true
+  - type: textarea
+    id: status
+    attributes:
+      label: Sanitized status output
+      description: Paste `keyboard-mouse --status`; remove anything you consider sensitive.
+      render: shell
+  - type: dropdown
+    id: mode
+    attributes:
+      label: Mode
+      options:
+        - Exclusive (default)
+        - Safe
+        - Both
+        - Not applicable
+    validations:
+      required: true

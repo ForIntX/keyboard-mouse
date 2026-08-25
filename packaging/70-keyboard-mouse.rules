@@ -1,0 +1,7 @@
+# This file must sort before 71-seat.rules and 73-seat-late.rules so systemd can
+# turn the uaccess tag into an ACL for the active local desktop session.
+# Grant that session access to uinput and keyboard event nodes.
+# ID_INPUT_KEYBOARD is assigned by udev's input_id builtin; mice and unrelated
+# input devices do not match this rule.
+KERNEL=="uinput", SUBSYSTEM=="misc", TAG+="uaccess", OPTIONS+="static_node=uinput"
+SUBSYSTEM=="input", KERNEL=="event*", ENV{ID_INPUT_KEYBOARD}=="1", TAG+="uaccess"
