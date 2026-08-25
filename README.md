@@ -65,7 +65,7 @@ sudo zypper install cmake systemd
 
 ### 2. Projeyi indirin
 
-GitHub depo adresini kendi deponuzla değiştirin:
+Projeyi GitHub'dan klonlayın:
 
 ```bash
 git clone https://github.com/ForIntX/keyboard-mouse.git

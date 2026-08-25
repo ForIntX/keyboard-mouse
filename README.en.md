@@ -65,7 +65,7 @@ sudo zypper install cmake systemd
 
 ### 2. Download the project
 
-Replace the URL with your repository address:
+Clone the project from GitHub:
 
 ```bash
 git clone https://github.com/ForIntX/keyboard-mouse.git
